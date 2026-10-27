@@ -1,31 +1,117 @@
 ---
 title: About
-description: Network engineer transitioning into networking and cybersecurity.
+description: Air Force network engineer moving into civilian network and security engineering.
 ---
 
-I'm a network engineer with 6+ years in the U.S. Air Force designing,
-deploying, and maintaining WAN infrastructure, data center transport, and
-encrypted communications, moving from military to civilian network engineering and cybersecurity.
+import { Badge } from '@astrojs/starlight/components';
+import SkillGroup from '../../components/SkillGroup.astro';
+import Timeline from '../../components/Timeline.astro';
+import TimelineItem from '../../components/TimelineItem.astro';
+
+I'm a network engineer with 6+ years in the U.S. Air Force, spanning WAN
+engineering, service desk leadership, and data center operations. I'm moving
+into civilian network and security engineering.
 
 This site is where I document my homelab, networking labs, and security
 studies: partly so I don't forget, partly to show my work.
 
+## Experience
+
+<Timeline>
+  <TimelineItem title="Data Center Operations Supervisor" dates="Aug 2026 – Present" current>
+    Direct daily operations for a mission-critical, high-availability data center supporting 24/7 enterprise communications and multi-tenant secure networks.
+
+    - Manage DCIM: CRAC cooling, power distribution units, and electronic access control to maintain 100% operational uptime
+    - Serve as primary liaison to facilities engineering and contractors, directing preventive maintenance and switchgear overhauls
+    - Oversee rack-and-stack installs, hardware lifecycle, structured cabling, and circuit transport readiness to eliminate single points of failure
+  </TimelineItem>
+
+  <TimelineItem title="Facility & Infrastructure Manager" dates="Apr 2025 – Aug 2026">
+    Managed critical facility operations, building automation networks, and infrastructure security.
+
+    - Diagnosed and resolved an 8-month DDC/HVAC network broadcast storm and denial-of-service issue, restoring remote facility monitoring across base infrastructure
+    - Managed security access, clearance vetting, and logistics for contractors supporting a $130M facility renovation and switchgear overhaul
+    - Directed a 20-member winter logistics team keeping the site accessible through extreme weather
+  </TimelineItem>
+
+  <TimelineItem title="Service Desk Supervisor" dates="Jun 2024 – Apr 2025">
+    Technical support across 3 secure enclaves for 450+ users, safeguarding C4ISR communications for intelligence collection and analysis.
+
+    - Cut NIPR account onboarding from 8 hours to 4
+    - Resolved a critical all-call archiving failure and wrote the SOP that cut its troubleshooting from hours to minutes
+    - Updated network diagrams across 3 sites and built an IT audit process that caught 9 critical errors across 7 operational groups
+  </TimelineItem>
+
+  <TimelineItem title="Network Architecture Technician" dates="Mar 2021 – Jun 2024">
+    10-member network engineering team overseeing 570+ network devices and $6M in network assets, supporting 6,000+ personnel across 60 DoD, 20 contractor, and 4 core sites.
+
+    - Designed and executed a $1.1M WAN upgrade for 9 ISR mission sets, taking links from 1 Gbps to 10 Gbps and raising system availability 30%
+    - Partnered with commercial ISPs to grow high-speed link bandwidth from 300 Gbps to 630 Gbps
+    - Consolidated 12 HAIPE devices down to 2, saving $6,000 while maintaining COMSEC and DISA compliance
+    - Built a Python project tracker (120 to 30 minutes per update) and taught a Linux course to 15 joint personnel
+  </TimelineItem>
+
+  <TimelineItem title="Enlisted, U.S. Air Force" dates="Sep 2020">
+    Basic military training and Cyber Transport Systems technical training, before my first assignment in 2021.
+  </TimelineItem>
+</Timeline>
+
 ## Skills
 
-- **Networking:** Cisco routing and switching, WAN architecture, VLANs, circuit provisioning
-- **Security:** Firewalls, system hardening, network access control, STIG compliance
-- **Systems:** Linux (RHEL, Ubuntu), Windows Server, Active Directory, virtualization
+Highlighted skills link to write-ups where I used them.
+
+<SkillGroup title="Networking">
+  <Badge text="Cisco routing & switching" />
+  <Badge text="WAN architecture" />
+  <Badge text="IP addressing" />
+  <a href="/homelab/network/"><Badge text="VLANs & segmentation" variant="note" /></a>
+  <Badge text="Circuit provisioning" />
+  <Badge text="Fiber & copper transport" />
+</SkillGroup>
+
+<SkillGroup title="Security & cryptography">
+  <a href="/homelab/network/"><Badge text="Firewalls" variant="note" /></a>
+  <a href="/homelab/opnsense-php2shell-patch/"><Badge text="Patch management" variant="note" /></a>
+  <Badge text="System hardening" />
+  <Badge text="STIG / DISA compliance" />
+  <Badge text="HAIPE & KG-175" />
+  <Badge text="COMSEC" />
+</SkillGroup>
+
+<SkillGroup title="Systems & virtualization">
+  <Badge text="Linux (RHEL, Ubuntu)" />
+  <Badge text="Windows Server" />
+  <Badge text="Active Directory" />
+  <Badge text="VMware" />
+  <Badge text="Proxmox VE" />
+  <Badge text="EVE-NG" />
+</SkillGroup>
+
+<SkillGroup title="Homelab & tools">
+  <a href="/homelab/opnsense-php2shell-patch/"><Badge text="OPNsense" variant="note" /></a>
+  <a href="/homelab/opnsense-git-backup/"><Badge text="Git" variant="note" /></a>
+  <a href="/homelab/network/#encrypted-dns-dns-over-tls"><Badge text="DNS-over-TLS" variant="note" /></a>
+  <Badge text="Python scripting" />
+  <Badge text="SOP development" />
+</SkillGroup>
 
 ## Certifications
 
-- CompTIA Security+, Network+, A+
-- LPI Linux Essentials
-- CCNA (in progress)
+<SkillGroup title="Active">
+  <Badge text="CompTIA Security+" variant="success" />
+  <Badge text="CompTIA Network+" variant="success" />
+  <Badge text="CompTIA A+" variant="success" />
+  <Badge text="LPI Linux Essentials" variant="success" />
+</SkillGroup>
+
+<SkillGroup title="In progress">
+  <Badge text="Cisco CCNA" variant="caution" />
+</SkillGroup>
 
 ## Education
 
 - B.S. Cybersecurity Technology, University of Maryland Global Campus
-- A.A.S. Information Systems Management, Community College of the Air Force
+- A.A.S. Information Systems Management, Community College of the Air Force (2024)
 
 ## Connect
 

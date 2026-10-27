@@ -1,0 +1,60 @@
+---
+// One entry in a Timeline. The slot holds the summary and highlights.
+interface Props {
+	title: string;
+	dates: string;
+	current?: boolean;
+}
+
+const { title, dates, current = false } = Astro.props;
+---
+
+<section class:list={['timeline-item', { current }]}>
+	<span class="dot" aria-hidden="true"></span>
+	<p class="dates">{dates}</p>
+	<h3 class="title">{title}</h3>
+	<div class="body">
+		<slot />
+	</div>
+</section>
+
+<style>
+	.timeline-item {
+		position: relative;
+		padding-bottom: 1.5rem;
+	}
+
+	.timeline-item:last-child {
+		padding-bottom: 0;
+	}
+
+	.dot {
+		position: absolute;
+		top: 0.3rem;
+		left: -1.75rem;
+		width: 1rem;
+		height: 1rem;
+		border-radius: 50%;
+		background: var(--sl-color-bg);
+		border: 2px solid var(--sl-color-gray-3);
+	}
+
+	.current .dot {
+		background: var(--sl-color-accent);
+		border-color: var(--sl-color-accent);
+	}
+
+	.dates {
+		margin: 0;
+		font-size: var(--sl-text-sm);
+		color: var(--sl-color-gray-3);
+	}
+
+	.title {
+		margin-top: 0.125rem;
+	}
+
+	.body {
+		margin-top: 0.5rem;
+	}
+</style>

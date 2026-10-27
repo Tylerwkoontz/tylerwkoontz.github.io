@@ -1,0 +1,43 @@
+---
+// A labeled row of Starlight Badge pills. Pills wrapped in <a> link to proof.
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="skill-group">
+	<p class="label">{title}</p>
+	<div class="pills">
+		<slot />
+	</div>
+</div>
+
+<style>
+	.skill-group {
+		margin-top: 1rem;
+	}
+
+	.label {
+		margin: 0 0 0.375rem;
+		font-weight: 600;
+		color: var(--sl-color-white);
+	}
+
+	.pills {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	/* Linked pills: no underline, slight lift on hover */
+	.pills :global(a) {
+		text-decoration: none;
+		transition: transform 0.1s ease;
+	}
+
+	.pills :global(a:hover) {
+		transform: translateY(-1px);
+	}
+</style>

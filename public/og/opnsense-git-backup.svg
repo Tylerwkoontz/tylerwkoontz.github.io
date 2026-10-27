@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="627" viewBox="0 0 1200 627">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101218"/>
+      <stop offset="1" stop-color="#17181c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1" cy="0" r="0.75">
+      <stop offset="0" stop-color="#6685ff" stop-opacity="0.32"/>
+      <stop offset="1" stop-color="#6685ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="627" fill="url(#bg)"/>
+  <rect width="1200" height="627" fill="url(#grid)"/>
+  <rect width="1200" height="627" fill="url(#glow)"/>
+  <rect x="0" y="0" width="10" height="627" fill="#6685ff"/>
+
+  <!-- Eyebrow -->
+  <text x="72" y="92" font-family="Ubuntu" font-weight="500" font-size="22" letter-spacing="4" fill="#6685ff">HOMELAB GUIDE</text>
+
+  <!-- Title -->
+  <text x="72" y="178" font-family="Ubuntu" font-weight="700" font-size="74" fill="#ffffff">Back Up OPNsense</text>
+  <text x="72" y="262" font-family="Ubuntu" font-weight="700" font-size="74" fill="#ffffff">to a <tspan fill="#b6c4fb">Private Git Repo</tspan></text>
+
+  <!-- CVEs -->
+  <text x="72" y="314" font-family="Ubuntu Mono" font-size="26" fill="#9ca3af">os-git-backup  ·  deploy key  ·  daily push</text>
+
+  <!-- Version cards -->
+  <g font-family="Ubuntu">
+    <rect x="72" y="358" width="500" height="118" rx="14" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.12"/>
+    <text x="100" y="398" font-size="20" font-weight="500" fill="#9ca3af">Every config change</text>
+    <text x="100" y="450" font-family="Ubuntu Mono" font-size="38" font-weight="700" fill="#ffffff"><tspan fill="#6685ff">→</tspan> its own commit</text>
+
+    <rect x="596" y="358" width="532" height="118" rx="14" fill="#22c55e" fill-opacity="0.08" stroke="#22c55e" stroke-opacity="0.55"/>
+    <text x="624" y="398" font-size="20" font-weight="500" fill="#9ca3af">Disaster recovery</text>
+    <text x="624" y="450" font-family="Ubuntu Mono" font-size="38" font-weight="700" fill="#ffffff">restore tested <tspan fill="#4ade80">✓</tspan></text>
+  </g>
+
+  <!-- Footer -->
+  <text x="72" y="556" font-family="Ubuntu" font-size="24" fill="#d1d5db">Includes the fix for “authentication failure”</text>
+  <text x="1128" y="556" text-anchor="end" font-family="Ubuntu" font-weight="700" font-size="24" fill="#6685ff">tylerkoontz.net</text>
+</svg>

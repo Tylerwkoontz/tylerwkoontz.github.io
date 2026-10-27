@@ -3,6 +3,27 @@ title: Back Up OPNsense to a Private GitHub Repo
 description: Automatically back up your OPNsense config.xml to a private GitHub repository with the os-git-backup plugin and a deploy key.
 sidebar:
   label: Config backup to Git
+head:
+  - tag: meta
+    attrs:
+      property: og:image
+      content: https://tylerkoontz.net/og/opnsense-git-backup.png
+  - tag: meta
+    attrs:
+      property: og:image:width
+      content: '1200'
+  - tag: meta
+    attrs:
+      property: og:image:height
+      content: '627'
+  - tag: meta
+    attrs:
+      property: og:image:alt
+      content: 'Back Up OPNsense to a Private Git Repo: every config change becomes its own commit, restore tested'
+  - tag: meta
+    attrs:
+      name: twitter:image
+      content: https://tylerkoontz.net/og/opnsense-git-backup.png
 ---
 
 | | |

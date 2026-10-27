@@ -1,9 +1,10 @@
 ---
-title: Homelab & Network Engineering
-description: From Air Force WAN engineering to homelabs and security, documenting what I build and learn.
+title: Network & Security Engineering
+description: Air Force network engineer documenting a homelab built like production. Segmented, patched, backed up, and verified.
 template: splash
 hero:
-  tagline: From Air Force network engineering to homelabs and cybersecurity, documenting what I build and learn.
+  title: Network engineer, building in public
+  tagline: 6+ years in the Air Force, from WAN engineering to data center operations. Now documenting a homelab built like production. Segmented, patched, backed up, and every fix verified.
   actions:
     - text: Explore the homelab
       link: homelab/network/
@@ -24,8 +25,18 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
 <CardGrid>
   <LinkCard
-    title="My Home Network"
-    description="Segmented LAN and lab subnets behind an OPNsense firewall."
+    title="Patching OPNsense for PHP2Shell"
+    description="Verified the fix at the package level, patched with about 60 seconds of downtime, then closed a gap in GUI exposure."
+    href="homelab/opnsense-php2shell-patch/"
+  />
+  <LinkCard
+    title="Firewall config backups to Git"
+    description="Every OPNsense change becomes a commit in a private repo. Restore tested."
+    href="homelab/opnsense-git-backup/"
+  />
+  <LinkCard
+    title="Segmented home network"
+    description="Lab VLAN isolated from the LAN, and verified from the untrusted side."
     href="homelab/network/"
   />
   <LinkCard
@@ -38,19 +49,34 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 ## Coming next
 
 <CardGrid>
-  <Card title="Virtualization" icon="setting">
-    Proxmox VE hosting VMs and containers.
+  <Card title="Internal DNS" icon="random">
+    How Unbound serves `homelab.internal` and split DNS.
   </Card>
-  <Card title="Self-hosted services" icon="open-book">
-    Vaultwarden password manager.
+  <Card title="Virtualization" icon="setting">
+    Proxmox VE, with management moved off the lab VLAN.
+  </Card>
+  <Card title="HTTPS for the homelab" icon="approve-check">
+    Let's Encrypt wildcard certificates with my own domain.
+  </Card>
+  <Card title="Password manager" icon="open-book">
+    Self-hosted Vaultwarden.
   </Card>
 </CardGrid>
+
+## Why I build in public
+
+I write every guide so someone else can follow it, including the parts that
+broke. Most homelab tutorials show the happy path. The useful stuff is in the
+errors, the wrong turns, and the tests that caught what I missed.
+
+If one of these saves you an afternoon of troubleshooting, it did its job.
 
 ## How these docs work
 
 Each page follows the same format:
 
+- **Summary**: problem, approach, and outcome in one table
 - **Goal**: what I'm trying to do and why
-- **Setup**: what I actually did
+- **Steps**: what I actually did, with screenshots
 - **Verify**: how I proved it works
 - **Lessons**: what broke and what I learned

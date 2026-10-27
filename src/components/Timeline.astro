@@ -1,0 +1,26 @@
+---
+// Vertical career timeline. Wrap TimelineItem entries, newest first.
+---
+
+<div class="timeline">
+	<slot />
+</div>
+
+<style>
+	.timeline {
+		position: relative;
+		margin-top: 1.5rem;
+		padding-left: 1.75rem;
+	}
+
+	/* The vertical line the dots sit on */
+	.timeline::before {
+		content: '';
+		position: absolute;
+		top: 0.5rem;
+		bottom: 0.5rem;
+		left: 0.4375rem;
+		width: 2px;
+		background: var(--sl-color-gray-5);
+	}
+</style>
