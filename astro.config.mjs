@@ -5,13 +5,21 @@ import starlightThemeGalaxy from 'starlight-theme-galaxy';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://tylerwkoontz.github.io',
 	integrations: [
 		starlight({
 			plugins: [starlightThemeGalaxy()],
-			title: 'Tyler\'s Homelab',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Tylerwkoontz/homelab' }],
+			title: 'Tyler Koontz',
+			social: [
+				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/tylerwkoontz' },
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/tylerwkoontz' },
+			],
 			sidebar: [
-				{label: 'Network', slug: 'network'},
+				{ label: 'About', slug: 'about' },
+				{
+					label: 'Homelab',
+					items: [{ autogenerate: { directory: 'homelab' } }],
+				},
 			],
 		}),
 	],
