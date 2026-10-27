@@ -1,4 +1,7 @@
-# Network
+---
+title: Network
+description: Segmented home network, OPNsense firewall, and encrypted DNS.
+---
 
 ## Goal
 
@@ -29,10 +32,11 @@ Notable hosts:
  192.168.1.0/24   192.168.10.0/24
 ```
 
-!!! note "Why segment?"
-    Anything I break or test in the lab can't reach my personal devices
-    unless a firewall rule explicitly allows it. This is the same idea as
-    separating enclaves in an enterprise network.
+:::note[Why segment?]
+Anything I break or test in the lab can't reach my personal devices
+unless a firewall rule explicitly allows it. This is the same idea as
+separating enclaves in an enterprise network.
+:::
 
 ## Firewall
 
@@ -55,8 +59,8 @@ In OPNsense (menu names may vary slightly by version):
    **Enable DNSSEC Support**.
 2. **Services → Unbound DNS → DNS over TLS**: add Cloudflare upstreams:
 
-    | Server     | Port | Verify CN          |
-    |------------|------|--------------------|
+    | Server     | Port | Verify CN            |
+    |------------|------|----------------------|
     | `1.1.1.1`  | 853  | `cloudflare-dns.com` |
     | `1.0.0.1`  | 853  | `cloudflare-dns.com` |
 

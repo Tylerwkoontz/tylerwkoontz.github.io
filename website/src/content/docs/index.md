@@ -1,4 +1,7 @@
-# Welcome
+---
+title: Welcome
+description: Documentation for my homelab network and self-hosted services
+---
 
 This is the documentation for my homelab, where I build and secure my own
 network and services.

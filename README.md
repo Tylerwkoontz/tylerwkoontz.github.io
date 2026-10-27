@@ -27,6 +27,7 @@ don't forget and partly to show my work.
 ## Working on the docs locally
 
 ```bash
-source .venv/bin/activate
-mkdocs serve        # then open http://127.0.0.1:8000
+cd website
+npm install        # first time only
+npm run dev        # then open http://localhost:4321
 ```
