@@ -20,15 +20,19 @@ hero:
 ---
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import Featured from '../../components/Featured.astro';
 
 ## What I've built
 
+<Featured
+  href="/homelab/opnsense-php2shell-patch/"
+  title="Patching OPNsense for PHP2Shell"
+  description="Verified the fix at the package level, patched with about 60 seconds of downtime, then closed a gap in GUI exposure."
+  image="/og/opnsense-php2shell-patch.png"
+  imageAlt="Patching OPNsense for PHP2Shell: OPNsense 26.1.2 to 26.1.11, PHP 8.3.30 to 8.3.36, verified at the package level"
+/>
+
 <CardGrid>
-  <LinkCard
-    title="Patching OPNsense for PHP2Shell"
-    description="Verified the fix at the package level, patched with about 60 seconds of downtime, then closed a gap in GUI exposure."
-    href="homelab/opnsense-php2shell-patch/"
-  />
   <LinkCard
     title="Firewall config backups to Git"
     description="Every OPNsense change becomes a commit in a private repo. Restore tested."
@@ -36,13 +40,8 @@ import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
   />
   <LinkCard
     title="Segmented home network"
-    description="Lab VLAN isolated from the LAN, and verified from the untrusted side."
+    description="Lab VLAN isolated from the LAN and verified from the untrusted side, plus encrypted DNS."
     href="homelab/network/"
-  />
-  <LinkCard
-    title="Encrypted DNS"
-    description="DNS-over-TLS to Cloudflare with DNSSEC validation."
-    href="homelab/network/#encrypted-dns-dns-over-tls"
   />
 </CardGrid>
 

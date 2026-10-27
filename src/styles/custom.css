@@ -1,0 +1,5 @@
+/* Splash hero without an image: use one full-width column instead of
+   leaving the image column empty and squeezing the text into half. */
+.hero:not(:has(> img, > .hero-html)) {
+	grid-template-columns: 1fr;
+}

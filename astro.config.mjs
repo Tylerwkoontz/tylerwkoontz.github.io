@@ -10,6 +10,7 @@ export default defineConfig({
 		starlight({
 			plugins: [starlightThemeGalaxy()],
 			title: 'Tyler Koontz',
+			customCss: ['./src/styles/custom.css'],
 			social: [
 				{ icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/tylerwkoontz' },
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/tylerwkoontz' },

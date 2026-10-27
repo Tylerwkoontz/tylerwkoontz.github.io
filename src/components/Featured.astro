@@ -1,0 +1,90 @@
+---
+// Full-width, clickable card that features one write-up with its thumbnail.
+interface Props {
+	href: string;
+	title: string;
+	description: string;
+	image: string;
+	imageAlt: string;
+	label?: string;
+}
+
+const { href, title, description, image, imageAlt, label = 'Featured' } = Astro.props;
+---
+
+<a class="featured not-content" href={href}>
+	<img src={image} alt={imageAlt} width="1200" height="627" loading="lazy" decoding="async" />
+	<div class="text">
+		<p class="label">{label}</p>
+		<p class="title">{title}</p>
+		<p class="description">{description}</p>
+	</div>
+</a>
+
+<style>
+	.featured {
+		display: block;
+		margin-top: 1rem;
+		overflow: hidden;
+		border: 1px solid var(--sl-color-gray-5);
+		border-radius: 0.75rem;
+		color: inherit;
+		text-decoration: none;
+		transition: border-color 0.15s ease, transform 0.15s ease;
+	}
+
+	.featured:hover {
+		border-color: var(--sl-color-accent);
+		transform: translateY(-2px);
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-bottom: 1px solid var(--sl-color-gray-5);
+	}
+
+	.text {
+		padding: 1rem 1.25rem 1.25rem;
+	}
+
+	/* Wide screens: thumbnail left, text right, so the image stays a sensible size */
+	@media (min-width: 50rem) {
+		.featured {
+			display: grid;
+			grid-template-columns: 52% 1fr;
+			align-items: center;
+		}
+
+		img {
+			border-bottom: none;
+			border-right: 1px solid var(--sl-color-gray-5);
+		}
+
+		.text {
+			padding: 1.25rem 1.5rem;
+		}
+	}
+
+	.label {
+		margin: 0;
+		font-size: var(--sl-text-xs);
+		font-weight: 600;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--sl-color-accent);
+	}
+
+	.title {
+		margin: 0.25rem 0 0;
+		font-size: var(--sl-text-xl);
+		font-weight: 600;
+		color: var(--sl-color-white);
+	}
+
+	.description {
+		margin: 0.375rem 0 0;
+		color: var(--sl-color-gray-2);
+	}
+</style>
