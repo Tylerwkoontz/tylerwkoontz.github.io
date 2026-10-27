@@ -2,7 +2,10 @@
 title: Network
 description: Segmented home network, OPNsense firewall, and encrypted DNS.
 ---
+
 :::caution[Work in progress]
+Some sections are still being written.
+:::
 
 ## Goal
 
@@ -29,7 +32,7 @@ Notable hosts:
                |
           [ OPNsense ]
            /        \
-       LAN           Lab 
+       LAN           Lab
  192.168.1.0/24   192.168.10.0/24
 ```
 
@@ -37,6 +40,7 @@ Notable hosts:
 Anything I break or test in the lab can't reach my personal devices
 unless a firewall rule explicitly allows it. This is the same idea as
 separating enclaves in an enterprise network.
+:::
 
 ## Firewall
 
@@ -85,5 +89,3 @@ TODO: what broke or surprised me while setting this up.
 
 - [ ] Block outbound port 53 from clients so devices can't bypass Unbound
 - [ ] Document firewall rules in detail
-
-:::
