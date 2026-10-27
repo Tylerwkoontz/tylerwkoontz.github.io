@@ -5,7 +5,7 @@ import starlightThemeGalaxy from 'starlight-theme-galaxy';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://tylerwkoontz.github.io',
+	site: 'https://tylerkoontz.net',
 	integrations: [
 		starlight({
 			plugins: [starlightThemeGalaxy()],
