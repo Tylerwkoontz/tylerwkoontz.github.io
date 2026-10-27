@@ -101,8 +101,8 @@ If the update had broken something, this file restores every setting on a
 fresh install. I keep it outside any git repo, encrypted, with the password
 written down offline.
 
-For the long term, I'm setting up automatic, version-controlled backups to a
-private GitHub repo. That guide is coming soon.
+For the long term, I also set up automatic, version-controlled backups:
+[Back up OPNsense to a private GitHub repo](/homelab/opnsense-git-backup/).
 
 ## Step 4: Patch
 
@@ -265,9 +265,11 @@ Once 26.1 was fully patched, OPNsense offered the next **major** release,
 
 ![OPNsense offering a major upgrade: base, kernel and packages from 26.1 to 26.7](../../../assets/opnsense-patch/21-major-upgrade-available.png)
 
-I'm holding that until my automated Git backup is working, so a major
-upgrade has a versioned restore point behind it. 26.1.11 already contains the
-PHP2Shell fix, so there's no security reason to rush it.
+I held off until my
+[automated Git backup](/homelab/opnsense-git-backup/) was working, so a major
+upgrade has a versioned restore point behind it. That's done now, so 26.7 is
+next. 26.1.11 already contains the PHP2Shell fix, so there's no security
+reason to rush it.
 
 ## Lessons
 
