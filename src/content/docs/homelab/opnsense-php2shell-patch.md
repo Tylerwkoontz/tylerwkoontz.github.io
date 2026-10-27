@@ -3,6 +3,27 @@ title: Patching OPNsense for PHP2Shell
 description: How I patched OPNsense for the PHP2Shell vulnerabilities (CVE-2026-109618, CVE-2026-109619), and why I checked the PHP package instead of trusting the version number.
 sidebar:
   label: PHP2Shell patch
+head:
+  - tag: meta
+    attrs:
+      property: og:image
+      content: https://tylerkoontz.net/og/opnsense-php2shell-patch.png
+  - tag: meta
+    attrs:
+      property: og:image:width
+      content: '1200'
+  - tag: meta
+    attrs:
+      property: og:image:height
+      content: '627'
+  - tag: meta
+    attrs:
+      property: og:image:alt
+      content: 'Patching OPNsense for PHP2Shell: OPNsense 26.1.2 to 26.1.11, PHP 8.3.30 to 8.3.36, verified at the package level'
+  - tag: meta
+    attrs:
+      name: twitter:image
+      content: https://tylerkoontz.net/og/opnsense-php2shell-patch.png
 ---
 
 In October 2026, two critical PHP vulnerabilities, known as
