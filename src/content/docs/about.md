@@ -3,10 +3,9 @@ title: About
 description: Network engineer transitioning into networking and cybersecurity.
 ---
 
-I'm a network engineer with 5+ years in the U.S. Air Force designing,
+I'm a network engineer with 6+ years in the U.S. Air Force designing,
 deploying, and maintaining WAN infrastructure, data center transport, and
-encrypted communications. I'm building toward a career in network
-engineering and cybersecurity.
+encrypted communications, moving from military to civilian network engineering and cybersecurity.
 
 This site is where I document my homelab, networking labs, and security
 studies: partly so I don't forget, partly to show my work.
