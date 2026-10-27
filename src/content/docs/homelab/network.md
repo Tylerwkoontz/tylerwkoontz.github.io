@@ -12,24 +12,24 @@ private.
 
 ## Design
 
-| Network | Subnet             | Interface | Purpose                                      |
-|---------|--------------------|-----------|----------------------------------------------|
-| LAN     | `192.168.1.0/24`   | `igc0`    | Trusted clients and management               |
-| Lab     | `192.168.10.0/24`  | TODO      | GNS3, lab VMs, auxiliary services            |
+| Network | Subnet             | Purpose                                      |
+|---------|--------------------|----------------------------------------------|
+| LAN     | `192.168.1.0/24`   | Trusted clients and management               |
+| Lab     | `192.168.10.0/24`  | GNS3, lab VMs, auxiliary services            |
 
 Notable hosts:
 
-| Host         | IP               | Role                         |
+| Host         | Network          | Role                         |
 |--------------|------------------|------------------------------|
-| OPNsense     | TODO             | Gateway / firewall           |
-| Storage host | `192.168.10.160` | SMB file shares              |
+| OPNsense     | Both             | Gateway / firewall           |
+| Storage host | Lab              | SMB file shares              |
 
 ```text
            Internet
                |
           [ OPNsense ]
            /        \
-   LAN (igc0)      Lab (TODO)
+       LAN           Lab 
  192.168.1.0/24   192.168.10.0/24
 ```
 
