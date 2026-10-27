@@ -1,0 +1,41 @@
+---
+title: Tyler's Homelab
+description: Documentation for my homelab network and self-hosted services
+template: splash
+hero:
+  tagline: Building and securing my own network and services, and taking back control of my personal data.
+  actions:
+    - text: Explore the network
+      link: network/
+      icon: right-arrow
+    - text: View on GitHub
+      link: https://github.com/tylerwkoontz/homelab
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid>
+  <Card title="Network" icon="rocket">
+    Segmented LAN and lab subnets behind an OPNsense firewall.
+  </Card>
+  <Card title="Encrypted DNS" icon="approve-check">
+    DNS-over-TLS to Cloudflare with DNSSEC validation.
+  </Card>
+  <Card title="Virtualization" icon="setting">
+    Proxmox VE hosting VMs and containers.
+  </Card>
+  <Card title="Self-hosted services" icon="open-book">
+    Coming soon: Vaultwarden password manager.
+  </Card>
+</CardGrid>
+
+## How these docs work
+
+Each page follows the same format:
+
+- **Goal**: what I'm trying to do and why
+- **Setup**: what I actually did
+- **Verify**: how I proved it works
+- **Lessons**: what broke and what I learned
